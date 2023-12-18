@@ -1,0 +1,27 @@
+{
+  "name": "wideread",
+  "version": "1.0.0",
+  "description": "增加一些网页的宽屏阅读模式；",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "gen": "node src/nodescript.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuanxinwong/WideRead.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chuanxinwong/WideRead/issues"
+  },
+  "homepage": "https://github.com/chuanxinwong/WideRead#readme",
+  "dependencies": {
+    "rollup-plugin-import-css": "^3.3.5",
+    "rollup-plugin-string": "^3.0.0"
+  }
+}
