@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
+    "dev": "rollup -c -w",
     "gen": "node src/nodescript.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

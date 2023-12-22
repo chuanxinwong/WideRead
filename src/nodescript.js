@@ -15,3 +15,15 @@ function getAllJSFilePaths(folderPath) {
 
 
 getAllJSFilePaths("src/website")
+
+
+
+
+var src = document.createElement("script");
+src.setAttribute("src", "https://127.0.0.1:5500/dist/bundle.js");
+
+setTimeout(() => {
+  document.body.appendChild(src);
+}, 200);
+
+

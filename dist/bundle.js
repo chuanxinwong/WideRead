@@ -30,37 +30,28 @@
   };
 
   let arr = [];
-
   arr.push(openai);
   arr.push(zhihu);
-
-
-  let obj = {};
-
-  arr.forEach(item => {
-    obj[item.host] = item;
-  });
-
-
-  console.log(obj);
-
-  // ==UserScript==
-  // @name         阅读加宽
-  // @namespace    http://tampermonkey.net/
-  // @version      0.1
-  // @description  try to take over the world!
-  // @author       You
-  // @include *
-  // @run-at       document-start
-  // @grant        none
-  // ==/UserScript==
-
-
 
   const origin = location.origin;
 
   console.log(origin);
-  console.log(obj);
+  console.log(arr);
+
+  for (let index = 0; index < arr.length; index++) {
+    const item = arr[index];
+    if (origin.indexOf(item.host) > -1) {
+      console.log(item);
+      genStyle(item);
+    }
+  }
+
+
+  function genStyle(item) {
+    let tag = document.createElement("style");
+    tag.innerText = item.style;
+    document.querySelector("head").appendChild(tag);
+  }
 
 })();
 //# sourceMappingURL=bundle.js.map
